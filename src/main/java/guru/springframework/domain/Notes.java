@@ -8,6 +8,12 @@ import javax.persistence.*;
 @Entity
 public class Notes {
 
+    public Notes() {}
+
+    public Notes(Recipe recipe) {
+        this.recipe = recipe;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
